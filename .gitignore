@@ -1,0 +1,24 @@
+node_modules/
+dist/
+__pycache__/
+.pytest_cache/
+artifacts/
+*.log
+
+# Real RSNA competition DICOMs: patient-derived imaging, never publish.
+sample-data/
+
+# Reproducible with: python server/generate_upload_studies.py
+upload-studies/
+
+# Large federated training artefacts (43 MB model + CSV splits).
+# Results are committed as server/federated_knee_run.json.
+federated-assets/
+
+# Unrelated personal documents.
+public/*.pdf
+
+# Coverage data and scratch probe scripts (kept locally, not part of the project).
+.coverage
+server/_probe_modal.py
+server/_feature_probe_modal.py
